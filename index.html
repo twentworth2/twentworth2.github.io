@@ -3,305 +3,24 @@
 <title>Tristan Wentworth</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="tdw.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://kit.fontawesome.com/8b57dad908.js" crossorigin="anonymous"></script>
-<style>
-    html {
-        scroll-behavior: smooth;
-    }
-
-    .typewriter {
-        overflow: hidden;
-        /* Ensures the content is not revealed until the animation */
-        /* The typwriter cursor */
-        white-space: nowrap;
-        /* Keeps the content on a single line */
-        margin: 0 auto;
-        /* Gives that scrolling effect as the typing happens */
-        letter-spacing: .15em;
-        /* Adjust as needed */
-        animation:
-            typing 3s steps(40, end),
-            blink-caret 2s step-end infinite;
-    }
-
-    /* The typing effect */
-    @keyframes typing {
-        from {
-            width: 0
-        }
-
-        to {
-            width: 70%
-        }
-    }
-
-    /* The typewriter cursor effect */
-    @keyframes blink-caret {
-
-        from,
-        to {
-            border-color: #b14e10
-        }
-
-        50% {
-            border-color: transparent;
-        }
-    }
-
-    .slideUp {
-        animation-name: slideUp;
-        -webkit-animation-name: slideUp;
-        animation-duration: 2s;
-        -webkit-animation-duration: 2s;
-        visibility: visible;
-    }
-
-    @keyframes slideUp {
-        0% {
-            opacity: 0;
-            -webkit-transform: translateY(100%);
-        }
-
-        100% {
-            opacity: 1;
-            -webkit-transform: translateY(0%);
-        }
-    }
-
-    @-webkit-keyframes slideUp {
-        0% {
-            opacity: 0;
-            -webkit-transform: translateY(70%);
-        }
-
-        100% {
-            opacity: 1;
-            -webkit-transform: translateY(0%);
-        }
-    }
-
-    .ocean {
-        height: 5%;
-        width: 100%;
-        position: relative;
-        bottom: 0;
-        left: 0;
-        background: #b14e10;
-    }
-
-    .democlass {
-        color: red;
-    }
-
-    .project-wts {
-        width: 100%;
-        height: auto;
-        overflow: hidden;
-        display: none;
-
-    }
-
-    .project-dig {
-        width: 100%;
-        height: auto;
-        overflow: hidden;
-        display: none;
-    }
-
-    .project-ebm {
-        width: 100%;
-        height: auto;
-        overflow: hidden;
-        display: none;
-    }
-
-    .project-bop {
-        width: 100%;
-        height: auto;
-        overflow: hidden;
-        display: none;
-    }
-
-    .wts-image {
-        max-width: 80%;
-        height: auto;
-        position: relative;
-        top: -10px;
-    }
-
-    .gitbutton {
-        background-size: contain;
-        background-image: url(github.png);
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-
-    .hide {
-        visibility: hidden;
-    }
-
-    .div-em {
-        border: 1px solid black;
-        padding: 10px;
-        box-shadow: 5px 10px 18px #000;
-    }
-
-    .waves {
-        position: relative;
-        width: 100%;
-        height: 15vh;
-        margin-bottom: -22px;
-        /*Fix for safari gap*/
-        min-height: 100px;
-        max-height: 150px;
-    }
-
-    .content {
-        position: relative;
-        height: 20vh;
-        text-align: center;
-        background-color: #b14e10;
-    }
-
-    /* Animation */
-    .parallax>use {
-        animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
-    }
-
-    .parallax>use:nth-child(1) {
-        animation-delay: -2s;
-        animation-duration: 7s;
-    }
-
-    .parallax>use:nth-child(2) {
-        animation-delay: -3s;
-        animation-duration: 10s;
-    }
-
-    .parallax>use:nth-child(3) {
-        animation-delay: -4s;
-        animation-duration: 13s;
-    }
-
-    .parallax>use:nth-child(4) {
-        animation-delay: -5s;
-        animation-duration: 20s;
-    }
-
-    @keyframes move-forever {
-        0% {
-            transform: translate3d(-90px, 0, 0);
-        }
-
-        100% {
-            transform: translate3d(85px, 0, 0);
-        }
-    }
-
-    /*Shrinking for mobile*/
-    @media (max-width: 768px) {
-        .waves {
-            height: 40px;
-            min-height: 40px;
-        }
-    }
-
-    /* Tooltip container */
-    .tooltip {
-        position: relative;
-        display: inline-block;
-        border-bottom: 1px dotted black;
-        /* If you want dots under the hoverable text */
-    }
-
-    /* Tooltip text */
-    .tooltip .tooltiptext {
-        visibility: hidden;
-        width: 120px;
-        background-color: lightgrey;
-        color: #000;
-        text-align: center;
-        padding: 5px 0;
-        border-radius: 6px;
-
-        /* Position the tooltip text - see examples below! */
-        position: absolute;
-        z-index: 1;
-    }
-
-    /* Show the tooltip text when you mouse over the tooltip container */
-    .tooltip:hover .tooltiptext {
-        visibility: visible;
-    }
-
-    body,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
-    }
-
-    h1 {
-        text-shadow: 1px 1px 1px #000;
-    }
-
-
-    .row-padding img {
-        margin-bottom: 12px
-    }
-
-    /* Set the width of the sidebar to 120px */
-    .sidebar {
-        width: 100px;
-        background: url(vintage-wallpaper.png) repeat 0 0;
-        overflow: hidden;
-    }
-
-    .projectHead {
-        margin-left: 50px;
-        margin-right: 50px;
-    }
-
-    .projectContent {
-        margin-right: 20%;
-    }
-
-    /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-    #main {
-        margin-left: 100px;
-        margin-right: 100px;
-    }
-
-
-    @media only screen and (max-width: 800px) {
-        .projectHead {
-            margin-left: 0px;
-            margin-right: 0px;
-        }
-
-        .projectContent {
-            margin-right: 0%;
-        }
-    }
-</style>
-
-
 
 <body id="page-body" style=" background: url(vintage-wallpaper.png) repeat 0 0;">
 
     <div id="loader-wrapper">
-    <div id="loader"></div>
+        <div id="loader">
+        </div>
+        <div class="loader-section section-left">
+            <h1 style="position: relative; top: 40%; color:lightgray;width: auto;font-size: 6vw" class="center block"> It's Okay</h1>
+        </div>
+        <div class="loader-section section-right">
+            <h1 style="margin-top: 33vh; color:lightgray;width: auto;font-size: 6vw" class="center block"> I Speak <span style="color:#db6114; font-size: 120%">Computer</span></h1>
+        </div>
 
-    <div class="loader-section section-left"></div>
-    <div class="loader-section section-right"></div>
-
-</div>
+    </div>
 
     <div style='float:right; width: 100px;background: url(vintage-wallpaper.png) repeat 0 0;margin-top: 16px' id="nav">
         <div style='position: fixed'>
@@ -311,20 +30,19 @@
                 <a href="#about-nav" style="display: block" class="padding-small hover-text-orange text-light-grey"> ABOUT</a>
                 <a href="#projects-nav" style="display: block" class="padding-small hover-text-orange text-light-grey">PROJECTS</a>
                 <a href="#contact" style="display: block" class="padding-small hover-text-orange text-light-grey">CONTACT</a>
-                <button style="border-radius: 10px;font-size: 110%" onclick="window.location.href = '5_11_20_Resume.pdf';" class="button light-grey section hover-orange">
-                    RESUME
-                </button>
+                <a href="5_11_20_Resume.pdf" style="display: block" class="padding-small hover-text-orange text-light-grey">RESUME</a>
             </nav>
         </div>
     </div>
 
     <!-- Navbar on small screens (Hidden on medium and large screens) -->
     <div class="top hide-large hide-medium" id="myNavbar">
-        <div class="bar black opacity hover-opacity-off center small">
-            <a href="#" class="bar-item button" style="width:25% !important">HOME</a>
-            <a href="#about-nav" class="bar-item button" style="width:25% !important">ABOUT</a>
-            <a href="#projects-nav" class="bar-item button" style="width:25% !important">PROJECTS</a>
-            <a href="#contact" class="bar-item button" style="width:25% !important">CONTACT</a>
+        <div class="bar black opacity hover-opacity-off center small block" style="background: url(vintage-wallpaper.png)">
+            <a href="5_11_20_Resume.pdf" class="bar-item button hover-text-orange text-light-grey" style="width:20%;background: url(vintage-wallpaper.png)">RESUME</a>
+            <a href="#contact" class="bar-item button hover-text-orange text-light-grey" style="width:20%; background: url(vintage-wallpaper.png)">CONTACT</a>
+            <a href="#projects-nav" class="bar-item button hover-text-orange text-light-grey" style="width:20%; background: url(vintage-wallpaper.png)">PROJECTS</a>
+            <a href="#about-nav" class="bar-item button hover-text-orange text-light-grey" style="width:20%; background: url(vintage-wallpaper.png)">ABOUT</a>
+            <a href="#" class="bar-item button hover-text-orange text-light-grey" style="width:20%;background: url(vintage-wallpaper.png)">HOME</a>
         </div>
     </div>
 
@@ -332,14 +50,14 @@
     <div class="padding-large" id="main">
         <!-- Header/Home -->
         <header class="container padding-32 center" style="background: transparent; position: relative; " id="home">
-            <h1 class=""><span class="hide-small text-light-gray" id="im">Hi, I'm</span>
-                <div id = "type">
+            <h1 class=""><span class="hide-small text-light-gray" style="font-size: 3vw" id="im">Hi, I'm</span>
+                <div id="type">
                     <h1 class="center" style="color:#db6114;width: auto;font-size: 4vw" id="name"> Tristan Wentworth.</h1>
                 </div>
 
             </h1>
             <p class="text-light-gray">Computer Engineering Student - UW Madison 2020</p>
-            <img src="profile.jpg" alt="boy" class="image div-em" width="25%" height="30%" id="profile">
+            <img src="profile.jpg" alt="boy" class="image div-em profile-pic" id="profile">
         </header>
 
 
@@ -367,29 +85,42 @@
                 <div class="hide" id="skills" style="margin-left: 60px; margin-right: 60px">
                     <h1 class="text-light-grey">My Skills</h1>
                     <hr style="width:200px" class="opacity">
+
                     <p class="wide text-light-grey">Verilog/VDHL</p>
-                    <div class="white">
-                        <div style="background-color: #b14e10; height:28px;width:90%;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"></div>
+                    <div class="white opacity hover-opacity-off">
+                        <div style="">
+                        </div>
+
                     </div>
+
                     <p class="wide text-light-grey">HTML/CSS</p>
-                    <div class="white">
-                        <div style="background-color: #b14e10;height:28px;width:40%;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"></div>
+                    <div class="white opacity hover-opacity-off">
+                        <div class="skills-slider">
+                        </div>
                     </div>
+
                     <p class="wide text-light-grey">JAVA</p>
-                    <div class="white">
-                        <div style="background-color: #b14e10;height:28px;width:80%;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"></div>
+                    <div class="white opacity hover-opacity-off">
+                        <div class="skills-slider">
+                        </div>
                     </div>
+
                     <p class="wide text-light-grey">C++ (Embedded)</p>
-                    <div class="white">
-                        <div style="background-color: #b14e10;height:28px;width:65%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"></div>
+                    <div class="white opacity hover-opacity-off">
+                        <div class="skills-slider">
+                        </div>
                     </div>
+
                     <p class="wide text-light-grey">Python</p>
-                    <div class="white">
-                        <div style="background-color: #b14e10;height:28px;width:60%;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"></div>
+                    <div class="white opacity hover-opacity-off">
+                        <div class="skills-slider">
+                        </div>
                     </div>
+
                     <p class="wide text-light-grey">MATLAB</p>
-                    <div class="white">
-                        <div style="background-color: #b14e10;height:28px;width:40%;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"></div>
+                    <div class="white opacity hover-opacity-off">
+                        <div class="skills-slider">
+                        </div>
                     </div>
                     <br>
                 </div>
@@ -413,18 +144,18 @@
 
         <!-- Grid for pricing tables -->
         <div class="row-padding hide" style="margin:0 -16px; border: 0px; background: transparent" id="projects">
-            <ul class="ul center hover-opacity-off" style="background: transparent">
+            <ul class="ul center" style="background: transparent">
                 <li class="dark-grey xlarge padding-32 div-em">
                     <h1 style="font-size: 200%;" class="text-light-grey">Projects</h1>
                 </li>
                 <li id="project-menu" style="padding-top: 20px; width: 10%; display: inline; float: left;">
-                    <button id="wts-button" class="bar-item hover-text-orange padding-16" style="text-align: left; display:block;background:none;border:0px;color: lightgray; cursor: pointer" onclick="showDiv(1)">Worth Their Salt</button>
+                    <button id="wts-button" class="bar-item hover-text-orange padding-16 project-button" onclick="showDiv(1); onClickProjectMenu()">Worth Their Salt</button>
 
-                    <button id="dig-button" class="bar-item  hover-text-orange padding-16" style="text-align: left; display:block;background:none;border:0px;color: lightgray;cursor: pointer" onclick="showDiv(2)">Digital Harmonizer</button>
+                    <button id="dig-button" class="bar-item  hover-text-orange padding-16 project-button" onclick="showDiv(2); onClickProjectMenu()">Digital Harmonizer</button>
 
-                    <button id="ebm-button" class="bar-item hover-text-orange padding-16" style="text-align: left;display:block;background:none;border:0px;color: lightgray; cursor: pointer" onclick="showDiv(3)">eBike</button>
+                    <button id="ebm-button" class="bar-item hover-text-orange padding-16 project-button" onclick="showDiv(3); onClickProjectMenu()">eBike</button>
 
-                    <button id="bop-button" class="bar-item hover-text-orange padding-16" style="text-align: left;display:block;background:none;border:0px;color: lightgray; cursor: pointer" onclick="showDiv(4)">Bop It (TIVA Launchpad)</button>
+                    <button id="bop-button" class="bar-item hover-text-orange padding-16 project-button" onclick="showDiv(4); onClickProjectMenu()">Bop It (TIVA Launchpad)</button>
                 </li>
 
 
@@ -432,7 +163,7 @@
                 <li style="margin-left: 20%;" id="project-container" class="padding-24 projectContent" style="display: inline; float: right;">
 
                     <body id="page-body">
-                        <div class="project-wts text-light-grey" id="project-div-wts" style="display: none;background: transparent;">
+                        <div class="project-wts text-light-grey slideUp" id="project-div-wts" style="display: none;background: transparent;">
 
                             <h1 style="color: #b14e10">
                                 Worth Their Salt</h1>
@@ -446,16 +177,16 @@
                             <img class="wts-image" src="HD_Logo.png" id="logo">
                         </div>
 
-                        <div class="project-dig" id="project-div-dig" style="display: none;background: transparent;">
+                        <div class="project-dig slideUp" id="project-div-dig" style="display: none;background: transparent;">
 
-                            <h1 style="color: #b14e10">
+                            <h1 style="color: #db6114">
                                 Digital Harmonizer</h1>
                             <h5 class="projectHead text-light-grey">
                                 The goal of this project was to build an audio harmonizer using the DE1-SoC FPGA board by Altera. We wanted to use either the board’s line in or microphone's line in to play a note, voice, or other music to the board. We then would process the audio signal and output the harmonized note through the board’s line out.
                             </h5>
                             <ul class="text-light-grey">
                                 <p>
-                                    Was chosen as <span style="color: #b14e10">leader</span> of group of six.
+                                    Was chosen as <span style="color: #db6114">leader</span> of group of six.
                                 </p>
                                 <p>
                                     Created a custom compiler, assempler, and ISA.
@@ -495,9 +226,9 @@
                             </p>
                         </div>
 
-                        <div class="project-ebm text-light-grey" id="project-div-ebm" style="display: none;background: transparent;">
+                        <div class="project-ebm text-light-grey slideUp" id="project-div-ebm" style="display: none;background: transparent;">
 
-                            <h1 style="color: #b14e10">
+                            <h1 style="color: #db6114">
                                 eBike Microcontroller</h1>
                             <h5 class="projectHead">
                                 In this project we used Modelsim to create and test verilog modules for an eBike microcontroller. We also used Quartus for design synthesis. This class focused on the embbeded systems synthesis and verification.
@@ -507,7 +238,7 @@
                                     Worked in a group of four.
                                 </p>
                                 <p>
-                                    Used <span style="color: #b14e10">verilog</span> to create modules based off of behavior specifications.
+                                    Used <span style="color: #db6114">verilog</span> to create modules based off of behavior specifications.
                                 </p>
                                 <p>
                                     Created testbenches for modules, including self checking tests.
@@ -524,12 +255,12 @@
                             </p>
                         </div>
 
-                        <div class="project-bop text-light-grey" id="project-div-bop" style="display: none;background: transparent;">
+                        <div class="project-bop text-light-grey slideUp" id="project-div-bop" style="display: none;background: transparent;">
 
-                            <h1 id="bop-head" style="color: #b14e10">
+                            <h1 id="bop-head" style="color: #db6114">
                                 Bop It!</h1>
                             <h5 class="projectHead">
-                                In this project I and a partner programmed a TIVA launchpad using <span style="color: #b14e10">C++</span> to play a version of the childrens game Bop It! The goal was to design a project that showcased all the functions of our board.
+                                In this project I and a partner programmed a TIVA launchpad using <span style="color: #db6114">C++</span> to play a version of the childrens game Bop It! The goal was to design a project that showcased all the functions of our board.
                             </h5>
                             <ul>
                                 <p>
@@ -599,14 +330,14 @@
                 <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
             </defs>
             <g class="parallax">
-                <use xlink:href="#gentle-wave" x="48" y="0" fill="#b14e104d" />
-                <use xlink:href="#gentle-wave" x="48" y="3" fill="#b14e1080" />
-                <use xlink:href="#gentle-wave" x="48" y="5" fill="#b14e10b3" />
-                <use xlink:href="#gentle-wave" x="48" y="7" fill="#b14e10" />
+                <use xlink:href="#gentle-wave" x="48" y="0" fill="#db61144d" />
+                <use xlink:href="#gentle-wave" x="48" y="3" fill="#db611480" />
+                <use xlink:href="#gentle-wave" x="48" y="5" fill="#db6114b3" />
+                <use xlink:href="#gentle-wave" x="48" y="7" fill="#db6114" />
             </g>
         </svg>
     </div>
-    <div class="text-light-grey" style="background: #b14e10; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" id="contact">
+    <div class="text-light-grey" style="background: #db6114; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" id="contact">
         <p class="padding-16">
         </p>
         <h1 class="text-light-grey center">Contact Me</h1>
@@ -628,103 +359,114 @@
 
 <!-- END PAGE CONTENT -->
 
-<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
-    <script>
+
+<script src="https://code.jquery.com/jquery-1.9.1.min.js">
+</script>
+
+<script>
     $(document).ready(function() {
- 
-    setTimeout(function(){
-        $('body').addClass('loaded');
-    }, 2000);
-        
-    setTimeout(function(){
-        $('#type').addClass(" typewriter");
-    }, 2300);    
- 
-});
-    </script>
-    
-    
+
+        setTimeout(function() {
+            $('body').addClass('loaded');
+        }, 2000);
+
+        setTimeout(function() {
+            $('#type').addClass(" typewriter");
+        }, 2300);
+
+    });
+</script>
+
+<script>
+    function onClickProjectMenu() {
+        document.getElementById("wts-button").className = "bar-item hover-text-orange padding-16 project-button slide-left";
+        document.getElementById("dig-button").className = "bar-item hover-text-orange padding-16 project-button slide-left";
+        document.getElementById("ebm-button").className = "bar-item hover-text-orange padding-16 project-button slide-left";
+        document.getElementById("bop-button").className = "bar-item hover-text-orange padding-16 project-button slide-left";
+    }
+</script>
+
+
+
 <script>
     function showDiv(num) {
 
-        if (num == "1") {
-            var prim = document.getElementById("project-div-wts");
-            var hide1 = document.getElementById("project-div-dig");
-            var hide2 = document.getElementById("project-div-ebm");
-            var hide3 = document.getElementById("project-div-bop");
+        setTimeout(function() {
+            if (num == "1") {
+                var prim = document.getElementById("project-div-wts");
+                var hide1 = document.getElementById("project-div-dig");
+                var hide2 = document.getElementById("project-div-ebm");
+                var hide3 = document.getElementById("project-div-bop");
 
-            var primtext = document.getElementById("wts-button");
-            var hide1text = document.getElementById("dig-button");
-            var hide2text = document.getElementById("ebm-button");
-            var hide3text = document.getElementById("bop-button");
-        }
-        if (num == "2") {
-            var hide1 = document.getElementById("project-div-wts");
-            var prim = document.getElementById("project-div-dig");
-            var hide2 = document.getElementById("project-div-ebm");
-            var hide3 = document.getElementById("project-div-bop");
+                var primtext = document.getElementById("wts-button");
+                var hide1text = document.getElementById("dig-button");
+                var hide2text = document.getElementById("ebm-button");
+                var hide3text = document.getElementById("bop-button");
+            }
+            if (num == "2") {
+                var hide1 = document.getElementById("project-div-wts");
+                var prim = document.getElementById("project-div-dig");
+                var hide2 = document.getElementById("project-div-ebm");
+                var hide3 = document.getElementById("project-div-bop");
 
-            var hide1text = document.getElementById("wts-button");
-            var primtext = document.getElementById("dig-button");
-            var hide2text = document.getElementById("ebm-button");
-            var hide3text = document.getElementById("bop-button");
-        }
+                var hide1text = document.getElementById("wts-button");
+                var primtext = document.getElementById("dig-button");
+                var hide2text = document.getElementById("ebm-button");
+                var hide3text = document.getElementById("bop-button");
+            }
 
-        if (num == "3") {
-            var hide1 = document.getElementById("project-div-wts");
-            var hide2 = document.getElementById("project-div-dig");
-            var prim = document.getElementById("project-div-ebm");
-            var hide3 = document.getElementById("project-div-bop");
+            if (num == "3") {
+                var hide1 = document.getElementById("project-div-wts");
+                var hide2 = document.getElementById("project-div-dig");
+                var prim = document.getElementById("project-div-ebm");
+                var hide3 = document.getElementById("project-div-bop");
 
-            var hide2text = document.getElementById("wts-button");
-            var hide1text = document.getElementById("dig-button");
-            var primtext = document.getElementById("ebm-button");
-            var hide3text = document.getElementById("bop-button");
-        }
+                var hide2text = document.getElementById("wts-button");
+                var hide1text = document.getElementById("dig-button");
+                var primtext = document.getElementById("ebm-button");
+                var hide3text = document.getElementById("bop-button");
+            }
 
-        if (num == "4") {
-            var hide3 = document.getElementById("project-div-wts");
-            var hide1 = document.getElementById("project-div-dig");
-            var hide2 = document.getElementById("project-div-ebm");
-            var prim = document.getElementById("project-div-bop");
+            if (num == "4") {
+                var hide3 = document.getElementById("project-div-wts");
+                var hide1 = document.getElementById("project-div-dig");
+                var hide2 = document.getElementById("project-div-ebm");
+                var prim = document.getElementById("project-div-bop");
 
-            var hide3text = document.getElementById("wts-button");
-            var hide1text = document.getElementById("dig-button");
-            var hide2text = document.getElementById("ebm-button");
-            var primtext = document.getElementById("bop-button");
-        }
+                var hide3text = document.getElementById("wts-button");
+                var hide1text = document.getElementById("dig-button");
+                var hide2text = document.getElementById("ebm-button");
+                var primtext = document.getElementById("bop-button");
+            }
 
-        if (prim.style.display === "none") {
+            if (prim.style.display === "none") {
 
-            prim.style.display = "block";
-            hide1.style.display = "none";
-            hide2.style.display = "none";
-            hide3.style.display = "none";
+                prim.style.display = "block";
+                hide1.style.display = "none";
+                hide2.style.display = "none";
+                hide3.style.display = "none";
 
-            primtext.style.color = "#b14e10"
-            hide1text.style.color = "white"
-            hide2text.style.color = "white"
-            hide3text.style.color = "white"
+                primtext.style.color = "#b14e10"
+                hide1text.style.color = "white"
+                hide2text.style.color = "white"
+                hide3text.style.color = "white"
 
-        } else {
-            prim.style.display = "none";
-        }
-
-
-
+            } else {
+                prim.style.display = "none";
+            }
+        }, 200);
     }
 </script>
 
 <script>
-    
-/*    document.onload = (function() {
+    /*    document.onload = (function() {
  
     setTimeout(function(){
         document.body.addClass("loaded");
     }, 3000);
  
 });*/
-    
+
     window.onscroll = function() {
         on_scroll()
     };
@@ -778,8 +520,5 @@
     }
 </script>
 
-
-
-</body>
 
 </html>
