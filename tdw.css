@@ -728,6 +728,13 @@ hr{
         display: none;
     }
 
+    .project-nuc {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        display: none;
+    }
+
     .wts-image {
         max-width: 80%;
         height: auto;

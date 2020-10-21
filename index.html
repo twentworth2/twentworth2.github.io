@@ -122,6 +122,12 @@
                         <div class="skills-slider" style = "width: 50%">
                         </div>
                     </div>
+
+                    <p class="wide text-light-grey">SQL</p>
+                    <div class="white opacity hover-opacity-off">
+                        <div class="skills-slider" style = "width: 60%">
+                        </div>
+                    </div>
                     <br>
                 </div>
             </div>
@@ -137,9 +143,9 @@
        
         <p class="padding-64">
         </p>
-        <p class="padding-32" id="projects-nav">
+        <p class="padding-32" >
         </p>
-        <p class="padding-small">
+        <p class="padding-small" id="projects-nav">
         </p>
 
 
@@ -156,6 +162,8 @@
                     <button id="ebm-button" class="bar-item hover-text-orange padding-16 project-button" onclick="showDiv(3)">eBike</button>
 
                     <button id="bop-button" class="bar-item hover-text-orange padding-16 project-button" onclick="showDiv(4)">Bop It (TIVA Launchpad)</button>
+
+                    <button id="nuc-button" class="bar-item hover-text-orange padding-16 project-button" onclick="showDiv(5)">Nuclear Fuel Report</button>
                 </li>
 
 
@@ -303,6 +311,40 @@
                             <p class="padding-small">
                             </p>
                         </div>
+
+                        <div class="project-nuc text-light-grey slideUp" id="project-div-nuc" style="display: none;background: transparent;">
+
+                            <h1 id="nuc-head" style="color: #db6114">
+                                Nuclear Fuel Report</h1>
+                            <h5 class="projectHead">
+                                With a team of four we researched the economic feasibility of spent nuclear fuel reprocessing. (Spoiler Alert: It's not cheaper than uranium right now.)
+                            </h5>
+                            <ul>
+                                <p>
+                                    We researched the chosen project as a team, in our case focusing on ethics and costs.
+                                </p>
+                                <p>
+                                    Wrote the project paper using knowledge gained from our research. It including a table of contents, executive summary, and a recommendation.
+                                </p>
+                                <p>
+                                    Presented the project as a team to our peers.
+                                </p>
+                            </ul>
+                            <div class="row-padding" style="margin:0 -16px">
+                                    <div>
+                                        <p class="padding-16">
+                                        </p>
+                                        <div class="tooltip">
+                                            <a href="Economic-Feasibility-of-Spent-Nuclear-Reprocessing-in-the-United-States.pdf" class="fas fa-scroll fa-3x hover-text-orange text-light-grey">
+                                            </a>
+                                            <span class="tooltiptext">Nuclear Fuel Paper</span>
+                                        </div>
+                                    </div>
+                            </div>
+                            <p class="padding-small">
+                            </p>
+                        </div>
+
                     </body>
 
 
@@ -383,6 +425,7 @@
         document.getElementById("dig-button").className = "bar-item hover-text-orange padding-16 project-button slide-left";
         document.getElementById("ebm-button").className = "bar-item hover-text-orange padding-16 project-button slide-left";
         document.getElementById("bop-button").className = "bar-item hover-text-orange padding-16 project-button slide-left";
+        document.getElementById("nuc-button").className = "bar-item hover-text-orange padding-16 project-button slide-left";
     }
 </script>
 
@@ -397,22 +440,26 @@
                 var hide1 = document.getElementById("project-div-dig");
                 var hide2 = document.getElementById("project-div-ebm");
                 var hide3 = document.getElementById("project-div-bop");
+                var hide4 = document.getElementById("project-div-nuc");
 
                 var primtext = document.getElementById("wts-button");
                 var hide1text = document.getElementById("dig-button");
                 var hide2text = document.getElementById("ebm-button");
                 var hide3text = document.getElementById("bop-button");
+                var hide4text = document.getElementById("nuc-button");
             }
             if (num == "2") {
                 var hide1 = document.getElementById("project-div-wts");
                 var prim = document.getElementById("project-div-dig");
                 var hide2 = document.getElementById("project-div-ebm");
                 var hide3 = document.getElementById("project-div-bop");
+                var hide4 = document.getElementById("project-div-nuc");
 
                 var hide1text = document.getElementById("wts-button");
                 var primtext = document.getElementById("dig-button");
                 var hide2text = document.getElementById("ebm-button");
                 var hide3text = document.getElementById("bop-button");
+                var hide4text = document.getElementById("nuc-button");
             }
 
             if (num == "3") {
@@ -420,11 +467,13 @@
                 var hide2 = document.getElementById("project-div-dig");
                 var prim = document.getElementById("project-div-ebm");
                 var hide3 = document.getElementById("project-div-bop");
+                var hide4 = document.getElementById("project-div-nuc");
 
                 var hide2text = document.getElementById("wts-button");
                 var hide1text = document.getElementById("dig-button");
                 var primtext = document.getElementById("ebm-button");
                 var hide3text = document.getElementById("bop-button");
+                var hide4text = document.getElementById("nuc-button");
             }
 
             if (num == "4") {
@@ -432,11 +481,27 @@
                 var hide1 = document.getElementById("project-div-dig");
                 var hide2 = document.getElementById("project-div-ebm");
                 var prim = document.getElementById("project-div-bop");
+                var hide4 = document.getElementById("project-div-nuc");
 
                 var hide3text = document.getElementById("wts-button");
                 var hide1text = document.getElementById("dig-button");
                 var hide2text = document.getElementById("ebm-button");
                 var primtext = document.getElementById("bop-button");
+                var hide4text = document.getElementById("nuc-button");
+            }
+
+            if (num == "5") {
+                var hide3 = document.getElementById("project-div-wts");
+                var hide1 = document.getElementById("project-div-dig");
+                var hide2 = document.getElementById("project-div-ebm");
+                var hide4 = document.getElementById("project-div-bop");
+                var prim = document.getElementById("project-div-nuc");
+
+                var hide3text = document.getElementById("wts-button");
+                var hide1text = document.getElementById("dig-button");
+                var hide2text = document.getElementById("ebm-button");
+                var hide4text = document.getElementById("bop-button");
+                var primtext = document.getElementById("nuc-button");
             }
 
             if (prim.style.display === "none") {
@@ -445,11 +510,13 @@
                 hide1.style.display = "none";
                 hide2.style.display = "none";
                 hide3.style.display = "none";
+                hide4.style.display = "none";
 
                 primtext.style.color = "#b14e10"
                 hide1text.style.color = "white"
                 hide2text.style.color = "white"
                 hide3text.style.color = "white"
+                hide4text.style.color = "white"
 
             } else {
                 prim.style.display = "none";
