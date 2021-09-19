@@ -1,8 +1,11 @@
- src="https://code.jquery.com/jquery-1.9.1.min.js">
 
+
+    import './tdw.css';
+    
     $(document).ready(function() {
 
         setTimeout(function() {
+            console.log("Added loaded");
             $('body').addClass('loaded');
         }, 2000);
 
@@ -120,13 +123,13 @@
 
 
 
-    /*    document.onload = (function() {
+//         document.onload = (function() {
  
-    setTimeout(function(){
-        document.body.addClass("loaded");
-    }, 3000);
+//     setTimeout(function(){
+//         document.body.addClass("loaded");
+//     }, 3000);
  
-});*/
+// });
 
     window.onscroll = function() {
         on_scroll()
