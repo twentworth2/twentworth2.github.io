@@ -1,9 +1,4 @@
-
-
-    import './tdw.css';
-    
-    $(document).ready(function() {
-
+window.onload = function pageLoaded(){
         setTimeout(function() {
             console.log("Added loaded");
             $('body').addClass('loaded');
@@ -12,8 +7,8 @@
         setTimeout(function() {
             $('#type').addClass(" typewriter");
         }, 2300);
+    }
 
-    });
 
 
 
